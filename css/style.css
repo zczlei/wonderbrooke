@@ -1,0 +1,329 @@
+/* 全局样式 */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* 导航栏样式 */
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff !important;
+    padding: 8px 15px;
+    background-color: #8b0000;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.navbar-dark .navbar-nav .active > .nav-link {
+    background-color: #8b0000;
+}
+
+/* 分区标题样式 */
+.section-title {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: #8b0000;
+}
+
+/* 新闻列表样式 */
+.news-item {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.news-content h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.news-content .news-date {
+    color: #888;
+    font-size: 12px;
+}
+
+/* 卡片样式 */
+.card {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-card {
+    height: 100%;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.card-body {
+    padding: 12px;
+}
+
+.card-footer {
+    background-color: white;
+    border-top: 1px solid #f0f0f0;
+    padding: 8px 12px;
+}
+
+/* 徽章样式 */
+.badge {
+    font-weight: 500;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* 按钮样式 */
+.btn-outline-primary {
+    border-width: 1px;
+}
+
+.btn-link {
+    color: #007bff;
+    padding: 0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* 列表组样式 */
+.list-group-item {
+    padding: 10px 15px;
+    transition: all 0.2s;
+    border-left: none;
+    border-right: none;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* 排行榜样式 */
+.ranking-list {
+    counter-reset: ranking;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ranking-list li {
+    position: relative;
+    padding: 8px 0 8px 28px;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #eee;
+}
+
+.ranking-list li:before {
+    counter-increment: ranking;
+    content: counter(ranking);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #888;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.ranking-list li:nth-child(1):before {
+    background-color: #ff4d4f;
+    color: white;
+}
+
+.ranking-list li:nth-child(2):before {
+    background-color: #ff7a45;
+    color: white;
+}
+
+.ranking-list li:nth-child(3):before {
+    background-color: #ffa940;
+    color: white;
+}
+
+/* 页脚样式 */
+footer {
+    border-top: 3px solid #8b0000;
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .featured-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .news-img {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+/* 分类标签颜色 */
+.badge.bg-primary { background-color: #007bff !important; }  /* 游戏 */
+.badge.bg-info { background-color: #17a2b8 !important; }     /* 科技 */
+.badge.bg-success { background-color: #28a745 !important; }  /* 健康 */
+.badge.bg-warning { background-color: #ffc107 !important; color: #212529 !important; }  /* 体育 */
+.badge.bg-danger { background-color: #dc3545 !important; }   /* 汽车 */
+.badge.bg-dark { background-color: #343a40 !important; }     /* 穿搭 */
+.badge.bg-secondary { background-color: #6c757d !important; }/* 宠物/其他 */
+
+/* 轮播图样式 */
+.carousel {
+    border-radius: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 8%;
+    opacity: 0.7;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 0.9;
+}
+
+/* 排行榜标题 */
+.ranking-title {
+    background-color: #8b0000;
+    color: white;
+    padding: 8px 15px;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* 今日速读样式 */
+.today-read-title {
+    background-color: #8b0000;
+    color: white;
+    padding: 8px 15px;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.today-read-list .list-group-item {
+    padding: 10px 15px;
+    border-left: none;
+    border-right: none;
+}
+
+.today-read-list .list-group-item p {
+    margin-bottom: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.today-read-list .list-group-item h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* 精选好文样式 */
+.hot-article-title {
+    background-color: #8b0000;
+    color: white;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.hot-article-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.hot-article-img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.hot-article-content h5 {
+    font-size: 14px;
+    margin-bottom: 3px;
+    line-height: 1.4;
+}
+
+.hot-article-content .article-date {
+    color: #888;
+    font-size: 12px;
+}
+
+/* 响应式图片 */
+.card-img-top {
+    height: 160px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 140px;
+    }
+} 
