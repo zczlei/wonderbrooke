@@ -81,7 +81,7 @@
 - health-1.jpg至health-6.jpg：健康文章缩略图
 - games-featured.jpg：游戏分类特色图片
 - games-1.jpg至games-6.jpg：游戏文章缩略图
-- 其他分类页面的相应图片资源
+- 其他分类页面的相应[图片资源](https://goodmorningmeme.com)可以从这里查找
 
 ## 后续开发建议
 
